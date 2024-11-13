@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Filter Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Apply Image Filters</h1>
+    
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Upload and Filter Options</legend>
+            
+            <!-- Image Upload Field -->
+            <label for="file">Choose an Image:</label>
+            <input type="file" name="file" id="file" required>
+            <br><br>
+
+            <!-- Kernel Size Option -->
+            <label for="kernel_option">Select Kernel Size:</label>
+            <select name="kernel_option" id="kernel_option">
+                <option value="fixed">Fixed (5)</option>
+                <option value="auto">Automatic</option>
+            </select>
+            <br><br>
+
+            <!-- Algorithm Option -->
+            <label for="algorithm_option">Choose Filter Type:</label>
+            <select name="algorithm_option" id="algorithm_option">
+                <option value="average_smoothing">Average Smoothing</option>
+                <option value="gaussian_smoothing">Gaussian Smoothing</option>
+            </select>
+            <br><br>
+            
+            <!-- Submit Button -->
+            <button type="submit">Upload and Apply Filter</button>
+        </fieldset>
+    </form>
+</body>
+</html>

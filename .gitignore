@@ -1,0 +1,4 @@
+media/
+__pycache__/
+image/processed/
+image/uploads/
